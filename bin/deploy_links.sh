@@ -1,5 +1,6 @@
-ln -sf ../../src/backend/click-counter-client/target/click-counter-client.war jar/
-ln -sf ../../src/backend/click-counter-hz-server/target/click-counter-hz-server.jar jar/
+mkdir deploy
+ln -sf ../../src/backend/click-counter-client/target/click-counter-client.war deploy/
+ln -sf ../../src/backend/click-counter-hz-server/target/click-counter-hz-server.jar deploy/
 
-ln -sf ../../jar/click-counter-client.war jetty/webapps/
+ln -sf ../../deploy/click-counter-client.war jetty/webapps/
 
