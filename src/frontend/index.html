@@ -1,0 +1,65 @@
+  <!DOCTYPE html>
+  <meta charset="utf-8" />
+  <title>Click Counter</title>
+  <script language="javascript" type="text/javascript">
+
+    var wsUri = "ws://localhost:8080/click-counter-client/ws";
+    var output;
+    var websocket;
+
+    function init()
+    {
+      constructWS();
+    }
+
+    function constructWS()
+    {
+      websocket = new WebSocket(wsUri);
+      websocket.onopen = function(evt) { onOpen(evt) };
+      websocket.onclose = function(evt) { onClose(evt) };
+      websocket.onmessage = function(evt) { onMessage(evt) };
+      websocket.onerror = function(evt) { onError(evt) };
+    }
+
+    function onOpen(evt)
+    {
+      console.log("He have a new connection");
+    }
+
+    function onClose(evt)
+    {
+      console.log("connection is dead");
+    }
+
+    function onMessage(evt)
+    {
+      //console.log(evt);
+      document.getElementById("counter").innerHTML = evt.data;
+    }
+
+    function onError(evt)
+    {
+      console.log(evt)
+    }
+
+    function incCounter()
+    {
+      console.log("Incrementing counter...");
+      websocket.send("inc");
+    }
+
+    function decCounter()
+    {
+      console.log("Decrementing counter...");
+      websocket.send("dec");
+    }
+
+    window.addEventListener("load", init, false);
+
+  </script>
+
+  <h2>Click Counter</h2>
+  <p>Just click in Increment or Decrement... See what happen</p>
+  <button id="button" onClick="incCounter()">Increment</button>
+  <button id="button" onClick="decCounter()">Decrement</button>
+  <h2 id="counter">0</h2>

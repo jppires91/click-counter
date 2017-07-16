@@ -1,0 +1,1 @@
+java -jar jar/click-counter-hz-server.jar
