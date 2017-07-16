@@ -22,5 +22,5 @@ Cilck Counter using Websockets; Increment or decrement a shared long between all
 <h4>4 - Now you can start jetty running the script start_jetty.sh located at bin folder</h4>
 <p>or run java -jar start.jar in bin/jetty</p>
 
-<h4>5 - You can also run hazelcast instance, by running start_hz.sh in bin folder. You can run how many you want. They will just form a cluster.
+<h4>5 - You can also run hazelcast instance, by running start_hz.sh in bin folder. You can run how many you want. They will just form a cluster.</h4>
 <p>or run java -jar click-counter-hz-server.jar in bin/jar</p>
