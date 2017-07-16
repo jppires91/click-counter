@@ -24,3 +24,8 @@ Cilck Counter using Websockets; Increment or decrement a shared long between all
 
 <h4>5 - You can also run hazelcast instance, by running start_hz.sh in bin folder. You can run how many you want. They will just form a cluster.</h4>
 <p>or run java -jar click-counter-hz-server.jar in bin/jar</p>
+
+<h4>6 - Open the frontend page in a web browser, src/frontend/index.html</h4>
+<p>You can open how many you want</p>
+<p>Now you can try it by clicking on incremnent or decrement to increment or decrement the counter</p>
+<p>You will see the same value distributed per the multiple open pages</p>
