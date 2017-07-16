@@ -17,13 +17,13 @@ Cilck Counter using Websockets; Increment or decrement a shared long between all
 
 <h4>3 - Deploy the project running the script deploy_links.sh located in bin dir</h4>
 <p>or just copy src/backend/click-counter-client/target/click-counter-client.war to bin/jetty/webapps
-<br/>and src/backend/click-counter-hz-server/target/click-counter-hz-server.jar to bin/jar</p>
+<br/>and src/backend/click-counter-hz-server/target/click-counter-hz-server.jar to bin/deploy</p>
 
 <h4>4 - Now you can start jetty running the script start_jetty.sh located at bin folder</h4>
 <p>or run java -jar start.jar in bin/jetty</p>
 
 <h4>5 - You can also run hazelcast instance, by running start_hz.sh in bin folder. You can run how many you want. They will just form a cluster.</h4>
-<p>or run java -jar click-counter-hz-server.jar in bin/jar</p>
+<p>or run java -jar click-counter-hz-server.jar in bin/deploy</p>
 
 <h4>6 - Open the frontend page in a web browser, src/frontend/index.html</h4>
 <p>You can open how many you want</p>

@@ -1,1 +1,1 @@
-java -jar jar/click-counter-hz-server.jar
+java -jar deploy/click-counter-hz-server.jar
